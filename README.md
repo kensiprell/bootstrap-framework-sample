@@ -1,26 +1,13 @@
 
-This is the companion application for the [grails3-bootstrap](https://github.com/kensiprell/grails3-bootstrap) plugin.
+This is the companion application for the [bootstrap-framework-gradle](https://github.com/kensiprell/bootstrap-framework-gradle) plugin.
 
-Test drive steps:
-    
-    get clone https://github.com/kensiprell/grails3-bootstrap.git
-    
-    mv grails3-bootstrap bootstrap
-    
-    cd bootstrap
-    
-    gradle publishToMavenLocal
-    
-    cd ..
-    
-    get clone https://github.com/kensiprell/grails3-bootstrap-sample
-    
-    cd grails3-bootstrap-sample
-    
-    grails compile 
-    
-    grails run-app
-    
-I can't figure out how to get publishToMavenLocal to overwrite a SNAPSHOT release, so if you make changes, you'll have to delete the plugin directory (~/.m2/repository/org/grails/plugins/0.9.0-SNAPSHOT).
-    
-    
+It was built and tested in the following environment.
+
+* Grails 3.0.3
+
+* Bootstrap 3.3.5
+
+* Java 1.8.0_45
+
+* OSX 10.10.4
+
