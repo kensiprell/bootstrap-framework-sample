@@ -54,6 +54,8 @@ class StartController {
 	def themeExample() {}
 
 	def lessExample() {}
+	
+	def faExample() {}
 
 	def fileExists(root, file) {
 		def subDir = file.endsWith("css") ? "stylesheets" : "javascripts"

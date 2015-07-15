@@ -28,13 +28,18 @@
 	</div>
 
 	<div class="page-header">
-		<h2>Theme Example</h2>
+		<h2>Bootstrap Theme Example</h2>
 		<g:link action="themeExample" class="btn btn-primary" type="button">Theme Example</g:link>
 	</div>
 
 	<div class="page-header">
-		<h2>Less Example</h2>
+		<h2>Bootstrap Less Example</h2>
 		<g:link action="lessExample" class="btn btn-primary" type="button">LESS Example</g:link>
+	</div>
+
+	<div class="page-header">
+		<h2>Font Awesome Example</h2>
+		<g:link action="faExample" class="btn btn-primary" type="button">Font Awesome Example</g:link>
 	</div>
 
 	<div class="page-header">
