@@ -2,15 +2,17 @@ buildscript {
 	ext {
 		grailsVersion = project.grailsVersion
 		bootstrapFramework = [
-			//version        : "3.3.5",
-			//cssPath        : "",
-			//jsPath         : "",
-			useIndividualJs: true,
-			useLess        : true,
+			//version             : "3.3.5",
+			//cssPath             : "",
+			//jsPath              : "",
+			useIndividualJs       : true,
+			useLess               : true,
+			//invalidVersionFails : false
 			fontAwesome    : [
-				install: true,
-				//version : "4.2.0"
-				useLess: true
+				install               : true,
+				//version             : "4.3.0"
+				useLess               : true,
+				//invalidVersionFails : false
 			]
 		]
 		assetPiplineGradleVersion = "2.3.8"
@@ -34,7 +36,7 @@ plugins {
 	id "io.spring.dependency-management" version "0.5.1.RELEASE"
 }
 
-version "0.9.3-SNAPSHOT"
+version "0.9.4-SNAPSHOT"
 group "grails.plugin.bootstrap-framework-sample"
 
 apply plugin: "bootstrap-framework"
