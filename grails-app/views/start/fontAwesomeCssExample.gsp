@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Font Awesome Example</title>
+	<title>Font Awesome CSS</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +59,7 @@
 <div class="container theme-showcase" role="main">
 
 	<div class="jumbotron">
-		<h1>Font Awesome Example</h1>
+		<h1>Font Awesome CSS Example</h1>
 
 		<p>This is a template showcasing the examples from <a href="http://fontawesome.io/examples/">Font Awesome Examples</a>.</p>
 	</div>

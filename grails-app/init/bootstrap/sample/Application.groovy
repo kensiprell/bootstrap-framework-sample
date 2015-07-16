@@ -1,4 +1,4 @@
-package twitter.bootstrap.sample
+package bootstrap.sample
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

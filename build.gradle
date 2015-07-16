@@ -24,7 +24,7 @@ buildscript {
 	}
 	dependencies {
 		classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-		classpath "com.siprell.plugins:bootstrap-framework-gradle:0.9.3-SNAPSHOT"
+		classpath "com.siprell.plugins:bootstrap-framework:0.9.3"
 		classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPiplineGradleVersion"
 		classpath "com.bertramlabs.plugins:less-asset-pipeline:$assetPipelineLessVersion"
 	}
@@ -37,7 +37,7 @@ plugins {
 version "0.9.3-SNAPSHOT"
 group "grails.plugin.bootstrap-framework-sample"
 
-apply plugin: "bootstrap-framework-gradle"
+apply plugin: "bootstrap-framework"
 apply plugin: "spring-boot"
 apply plugin: "war"
 apply plugin: "asset-pipeline"
@@ -70,7 +70,6 @@ dependencyManagement {
 }
 
 dependencies {
-	//compile "com.siprell.plugins:bootstrap-framework-gradle:0.9.1"
 	compile "org.springframework.boot:spring-boot-starter-logging"
 	compile "org.springframework.boot:spring-boot-starter-actuator"
 	compile "org.springframework.boot:spring-boot-autoconfigure"

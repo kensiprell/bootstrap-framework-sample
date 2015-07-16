@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="layout" content="bootstrap"/>
-	<title>Bootstrap Framework Gradle</title>
+	<title>Bootstrap Framework</title>
 </head>
 
 <body>
@@ -10,27 +10,27 @@
 <div class="container theme-showcase" role="main">
 
 	<div class="page-header">
-		<h1>Bootstrap Framework Gradle Plugin Sample</h1>
+		<h1>Bootstrap Framework Plugin Sample</h1>
 	</div>
 
 	<div class="page-header">
-		<h2>Bootstrap Theme Example</h2>
-		<g:link action="themeExample" class="btn btn-primary" type="button">Bootstrap Theme</g:link>
+		<h2>Bootstrap CSS Example</h2>
+		<g:link action="bootstrapCssExample" class="btn btn-primary" type="button">Bootstrap CSS</g:link>
 	</div>
 
 	<div class="page-header">
 		<h2>Bootstrap LESS Example</h2>
-		<g:link action="lessExample" class="btn btn-primary" type="button">Bootstrap LESS</g:link>
+		<g:link action="bootstrapLessExample" class="btn btn-primary" type="button">Bootstrap LESS</g:link>
 	</div>
 
 	<div class="page-header">
-		<h2>Font Awesome Example</h2>
-		<g:link action="faExample" class="btn btn-primary" type="button">Font Awesome</g:link>
+		<h2>Font Awesome CSS Example</h2>
+		<g:link action="fontAwesomeCssExample" class="btn btn-primary" type="button">Font Awesome CSS</g:link>
 	</div>
 
 	<div class="page-header">
 		<h2>Font Awesome LESS Example</h2>
-		<g:link action="faLessExample" class="btn btn-primary" type="button">Font Awesome LESS</g:link>
+		<g:link action="fontAwesomeLessExample" class="btn btn-primary" type="button">Font Awesome LESS</g:link>
 	</div>
 
 	<div class="page-header">
