@@ -1,5 +1,6 @@
 buildscript {
 	ext {
+		bootstrapFrameworkVersion = "0.9.4-SNAPSHOT"
 		grailsVersion = project.grailsVersion
 		bootstrapFramework = [
 			//version             : "3.3.5",
@@ -26,7 +27,7 @@ buildscript {
 	}
 	dependencies {
 		classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-		classpath "com.siprell.plugins:bootstrap-framework:0.9.3"
+		classpath "com.siprell.plugins:bootstrap-framework:$bootstrapFrameworkVersion"
 		classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPiplineGradleVersion"
 		classpath "com.bertramlabs.plugins:less-asset-pipeline:$assetPipelineLessVersion"
 	}
@@ -37,7 +38,7 @@ plugins {
 }
 
 version "0.9.4-SNAPSHOT"
-group "grails.plugin.bootstrap-framework-sample"
+group "com.siprell.plugins"
 
 apply plugin: "bootstrap-framework"
 apply plugin: "spring-boot"
