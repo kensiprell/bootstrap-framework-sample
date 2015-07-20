@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		bootstrapFrameworkVersion = "0.9.4"
+		bootstrapFrameworkVersion = "1.0.0-SNAPSHOT"
 		grailsVersion = project.grailsVersion
 		bootstrapFramework = [
 			//version             : "3.3.5",
@@ -37,7 +37,7 @@ plugins {
 	id "io.spring.dependency-management" version "0.5.1.RELEASE"
 }
 
-version "0.9.4"
+version bootstrapFrameworkVersion
 group "com.siprell.plugins"
 
 apply plugin: "bootstrap-framework"
