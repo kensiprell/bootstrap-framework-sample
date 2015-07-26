@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		bootstrapFrameworkVersion = "1.0.0-SNAPSHOT"
+		bootstrapFrameworkVersion = "0.9.5-SNAPSHOT"
 		grailsVersion = project.grailsVersion
 		bootstrapFramework = [
 			//version             : "3.3.5",
@@ -52,6 +52,7 @@ apply plugin: "org.grails.grails-gsp"
 ext {
 	grailsVersion = project.grailsVersion
 	gradleWrapperVersion = project.gradleWrapperVersion
+	seleniumVersion = "2.46.0"
 }
 
 assets {
@@ -91,7 +92,9 @@ dependencies {
 	testCompile "org.grails:grails-plugin-testing"
 	testCompile "org.grails.plugins:geb"
 
-	testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
+	//testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
+	testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+	testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 
 	console "org.grails:grails-console"
 }

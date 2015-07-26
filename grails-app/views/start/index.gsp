@@ -15,22 +15,22 @@
 
 	<div class="page-header">
 		<h2>Bootstrap CSS Example</h2>
-		<g:link action="bootstrapCssExample" class="btn btn-primary" type="button">Bootstrap CSS</g:link>
+		<g:link action="bootstrapCssExample" class="btn btn-primary bootstrapCssExample" type="button">Bootstrap CSS</g:link>
 	</div>
 
 	<div class="page-header">
 		<h2>Bootstrap LESS Example</h2>
-		<g:link action="bootstrapLessExample" class="btn btn-primary" type="button">Bootstrap LESS</g:link>
+		<g:link action="bootstrapLessExample" class="btn btn-primary bootstrapLessExample" type="button">Bootstrap LESS</g:link>
 	</div>
 
 	<div class="page-header">
 		<h2>Font Awesome CSS Example</h2>
-		<g:link action="fontAwesomeCssExample" class="btn btn-primary" type="button">Font Awesome CSS</g:link>
+		<g:link action="fontAwesomeCssExample" class="btn btn-primary fontAwesomeCssExample" type="button">Font Awesome CSS</g:link>
 	</div>
 
 	<div class="page-header">
 		<h2>Font Awesome LESS Example</h2>
-		<g:link action="fontAwesomeLessExample" class="btn btn-primary" type="button">Font Awesome LESS</g:link>
+		<g:link action="fontAwesomeLessExample" class="btn btn-primary fontAwesomeLessExample" type="button">Font Awesome LESS</g:link>
 	</div>
 
 	<div class="page-header">

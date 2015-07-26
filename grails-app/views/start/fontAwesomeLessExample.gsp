@@ -35,7 +35,7 @@
 
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><g:link action="index">Home</g:link></li>
+				<li class="active"><g:link class="homeButton" action="index">Home</g:link></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li class="dropdown">

@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: twitter.bootstrap.sample
+        defaultPackage: bootstrap.sample
 info:
     app:
         name: '@info.app.name@'
