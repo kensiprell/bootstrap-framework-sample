@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		bootstrapFrameworkVersion = "0.9.5-SNAPSHOT"
+		bootstrapFrameworkVersion = "1.0.0-SNAPSHOT"
 		grailsVersion = project.grailsVersion
 		bootstrapFramework = [
 			//version             : "3.3.5",
