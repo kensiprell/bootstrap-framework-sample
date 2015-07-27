@@ -91,8 +91,6 @@ dependencies {
 
 	testCompile "org.grails:grails-plugin-testing"
 	testCompile "org.grails.plugins:geb"
-
-	//testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
 	testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
 	testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 
