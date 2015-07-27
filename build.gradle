@@ -97,6 +97,10 @@ dependencies {
 	console "org.grails:grails-console"
 }
 
+test {
+    systemProperty "geb.env", "chrome"
+}
+
 task wrapper(type: Wrapper) {
 	gradleVersion = gradleWrapperVersion
 }
