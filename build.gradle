@@ -6,13 +6,13 @@ buildscript {
 			//version             : "3.3.5",
 			//cssPath             : "",
 			//jsPath              : "",
-			useIndividualJs       : true,
-			useLess               : true,
+			useIndividualJs: true,
+			useLess        : true,
 			//invalidVersionFails : false
 			fontAwesome    : [
-				install               : true,
+				install: true,
 				//version             : "4.3.0"
-				useLess               : true,
+				useLess: true,
 				//invalidVersionFails : false
 			]
 		]
@@ -97,8 +97,8 @@ dependencies {
 	console "org.grails:grails-console"
 }
 
-test {
-    systemProperty "geb.env", "chrome"
+integrationTest {
+	systemProperties["geb.env"] = System.getProperty("geb.env", "chrome")
 }
 
 task wrapper(type: Wrapper) {

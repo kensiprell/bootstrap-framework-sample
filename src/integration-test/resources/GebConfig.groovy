@@ -1,14 +1,14 @@
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 
-
-// Set default in build.gradle
+// ./gradlew integrationTest
+// uses default set in build.gradle
 environments {
-	// grails -Dgeb.env=chrome test-app -functional
+	// ./gradlew -Dgeb.env=chrome integrationTest
 	chrome {
 		driver = { new ChromeDriver() }
 	}
-	// grails -Dgeb.env=firefox test-app -functional
+	// ./gradlew -Dgeb.env=firefox integrationTest
 	firefox {
 		driver = { new FirefoxDriver() }
 	}
