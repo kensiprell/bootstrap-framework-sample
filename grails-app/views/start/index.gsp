@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <head>
-	<meta name="layout" content="bootstrap"/>
 	<title>Bootstrap Framework</title>
+	<meta name="layout" content="bootstrap">
 </head>
 
 <body>
