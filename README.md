@@ -7,6 +7,8 @@ It was built and tested in the following environment.
 
 * Bootstrap 3.3.5
 
+* Font Awesome 4.3.0
+
 * Java 1.8.0_45
 
 * OSX 10.10.4
