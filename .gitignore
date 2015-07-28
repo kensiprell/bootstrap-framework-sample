@@ -18,6 +18,3 @@ stacktrace.log
 /build
 buildSrc/.gradle
 buildSrc/build
-grails-app/assets/*
-
-test.sh
