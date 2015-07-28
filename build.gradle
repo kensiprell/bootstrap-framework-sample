@@ -3,7 +3,7 @@ import org.apache.commons.io.FileUtils
 
 buildscript {
 	ext {
-		bootstrapFrameworkVersion = "1.0.0-SNAPSHOT"
+		bootstrapFrameworkVersion = "1.0.0"
 		grailsVersion = project.grailsVersion
 		bootstrapFramework = [
 			//version             : "3.3.5",
