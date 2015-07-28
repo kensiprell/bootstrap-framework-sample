@@ -98,8 +98,8 @@ dependencies {
 	testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
 	testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 	testCompile("com.codeborne:phantomjsdriver:1.2.1") {
-        transitive = false
-    }
+		transitive = false
+	}
 
 	console "org.grails:grails-console"
 }
@@ -139,21 +139,23 @@ task unzipPhantomJs(type: Copy) {
 }
 
 clean {
-    def javascriptsTree = fileTree("grails-app/assets/javascripts") {
-        include '**/*'
-    }
-    def stylesheetsTree = fileTree("grails-app/assets/stylesheets") {
-        include '**/*'
-    }
-    delete javascriptsTree
-    delete stylesheetsTree
-    delete "grails-app/assets/javascripts/bootstrap", "grails-app/assets/stylesheets/bootstrap", "grails-app/assets/stylesheets/font-awesome"
+	def javascriptsTree = fileTree("grails-app/assets/javascripts") {
+		include '**/*'
+	}
+	def stylesheetsTree = fileTree("grails-app/assets/stylesheets") {
+		include '**/*'
+	}
+	delete javascriptsTree
+	delete stylesheetsTree
+	delete "grails-app/assets/javascripts/bootstrap", "grails-app/assets/stylesheets/bootstrap", "grails-app/assets/stylesheets/font-awesome"
 }
 
 integrationTest {
-    dependsOn unzipPhantomJs
 	outputs.upToDateWhen { false }
 	systemProperties["geb.env"] = System.getProperty("geb.env", "chrome")
+	if (System.properties["geb.env"] == "phantomJs") {
+		dependsOn unzipPhantomJs
+	}
 	def phantomJsFilename = Os.isFamily(Os.FAMILY_WINDOWS) ? "phantomjs.exe" : "bin/phantomjs"
 	systemProperty "phantomjs.binary.path", new File(unzipPhantomJs.outputs.files.singleFile, phantomJsFilename).absolutePath
 }
