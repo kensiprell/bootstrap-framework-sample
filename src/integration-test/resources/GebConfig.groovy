@@ -1,5 +1,6 @@
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.phantomjs.PhantomJSDriver
 
 // ./gradlew integrationTest
 // uses default defined in build.gradle
@@ -12,4 +13,8 @@ environments {
 	firefox {
 		driver = { new FirefoxDriver() }
 	}
+	// ./gradlew -Dgeb.env=phantomJs integrationTest
+    phantomJs {
+        driver = { new PhantomJSDriver() }
+    }
 }

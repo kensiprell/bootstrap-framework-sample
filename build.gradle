@@ -1,3 +1,6 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+import org.apache.commons.io.FileUtils
+
 buildscript {
 	ext {
 		bootstrapFrameworkVersion = "1.0.0-SNAPSHOT"
@@ -53,6 +56,7 @@ ext {
 	grailsVersion = project.grailsVersion
 	gradleWrapperVersion = project.gradleWrapperVersion
 	seleniumVersion = "2.46.0"
+	phantomJsVersion = '1.9.7'
 }
 
 assets {
@@ -93,12 +97,65 @@ dependencies {
 	testCompile "org.grails.plugins:geb"
 	testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
 	testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+	testCompile("com.codeborne:phantomjsdriver:1.2.1") {
+        transitive = false
+    }
 
 	console "org.grails:grails-console"
 }
 
+task downloadPhantomJs {
+	def osFilenamePart
+	if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+		osFilenamePart = "windows.zip"
+	} else if (Os.isFamily(Os.FAMILY_MAC)) {
+		osFilenamePart = "macosx.zip"
+	} else if (Os.isFamily(Os.FAMILY_UNIX)) {
+		osFilenamePart = Os.isArch("amd64") ? "linux-x86_64.tar.bz2" : "linux-i686.tar.bz2"
+	}
+
+	def filename = "phantomjs-$phantomJsVersion-$osFilenamePart"
+	def outputFile = file("$buildDir/webdriver/$filename")
+	inputs.property("phantomJsVersion", phantomJsVersion)
+	outputs.file(outputFile)
+
+	doLast {
+		FileUtils.copyURLToFile(new URL("https://bitbucket.org/ariya/phantomjs/downloads/$filename"), outputFile)
+	}
+}
+
+task unzipPhantomJs(type: Copy) {
+	def outputDir = file("$buildDir/webdriver/phantomjs")
+	dependsOn downloadPhantomJs
+	outputs.dir(outputDir)
+
+	def archive = downloadPhantomJs.outputs.files.singleFile
+
+	from(Os.isFamily(Os.FAMILY_MAC) || Os.isFamily(Os.FAMILY_WINDOWS) ? zipTree(archive) : tarTree(archive))
+	into(outputDir)
+	eachFile { FileCopyDetails fcp ->
+		fcp.relativePath = new RelativePath(!fcp.directory, *fcp.relativePath.segments[1..-1])
+	}
+}
+
+clean {
+    def javascriptsTree = fileTree("grails-app/assets/javascripts") {
+        include '**/*'
+    }
+    def stylesheetsTree = fileTree("grails-app/assets/stylesheets") {
+        include '**/*'
+    }
+    delete javascriptsTree
+    delete stylesheetsTree
+    delete "grails-app/assets/javascripts/bootstrap", "grails-app/assets/stylesheets/bootstrap", "grails-app/assets/stylesheets/font-awesome"
+}
+
 integrationTest {
+    dependsOn unzipPhantomJs
+	outputs.upToDateWhen { false }
 	systemProperties["geb.env"] = System.getProperty("geb.env", "chrome")
+	def phantomJsFilename = Os.isFamily(Os.FAMILY_WINDOWS) ? "phantomjs.exe" : "bin/phantomjs"
+	systemProperty "phantomjs.binary.path", new File(unzipPhantomJs.outputs.files.singleFile, phantomJsFilename).absolutePath
 }
 
 task wrapper(type: Wrapper) {

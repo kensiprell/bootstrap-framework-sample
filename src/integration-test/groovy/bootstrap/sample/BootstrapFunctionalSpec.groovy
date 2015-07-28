@@ -60,7 +60,8 @@ class BootstrapFunctionalSpec extends GebSpec {
 		}
 
 		then:
-		$("i.fa.fa-camera-retro.fa-lg").css("transform") == "matrix(1, 0, 0, 1, 0, 0)"
+		//$("i.fa.fa-camera-retro.fa-lg").css("transform") == "matrix(1, 0, 0, 1, 0, 0)" not working with phantomJs
+		$("i.fa.fa-camera-retro.fa-lg").css("font-family").contains("FontAwesome")
 	}
 
 	void "go to fontAwesomeLessExample"() {
@@ -71,7 +72,8 @@ class BootstrapFunctionalSpec extends GebSpec {
 		}
 		$("a.fontAwesomeLessExample").click()
 		waitFor {
-			$("i.fa.fa-camera-retro.fa-lg").css("transform") == "matrix(1, 0, 0, 1, 0, 0)"
+			//$("i.fa.fa-camera-retro.fa-lg").css("transform") == "matrix(1, 0, 0, 1, 0, 0)" not working with phantomJs
+			$("i.fa.fa-camera-retro.fa-lg").css("font-family").contains("FontAwesome")
 		}
 
 		then:
