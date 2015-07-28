@@ -13,3 +13,9 @@ It was built and tested in the following environment.
 
 * OSX 10.10.4
 
+The most interesting sections are probably:
+
+* The ```<head>``` elements of the [views](https://github.com/kensiprell/bootstrap-framework-sample/tree/master/grails-app/views/start)
+
+* The [build.gradle](https://github.com/kensiprell/bootstrap-framework-sample/blob/master/build.gradle) file
+
