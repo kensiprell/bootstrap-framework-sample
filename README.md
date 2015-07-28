@@ -1,5 +1,5 @@
 
-This is the sample application for the [bootstrap-framework-gradle](https://github.com/kensiprell/bootstrap-framework) plugin.
+This is the sample application for the [bootstrap-framework](https://github.com/kensiprell/bootstrap-framework) Gradle plugin.
 
 It was built and tested in the following environment.
 
