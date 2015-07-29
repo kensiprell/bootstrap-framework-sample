@@ -14,7 +14,11 @@ environments {
 		driver = { new FirefoxDriver() }
 	}
 	// ./gradlew -Dgeb.env=phantomJs integrationTest
-    phantomJs {
-        driver = { new PhantomJSDriver() }
-    }
+	phantomJs {
+		driver = { 
+			def driverInstance = new PhantomJSDriver() 
+			driverInstance.manage().window().maximize() 
+			driverInstance 
+		}
+	}
 }
