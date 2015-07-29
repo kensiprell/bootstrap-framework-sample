@@ -3,7 +3,7 @@ import org.apache.commons.io.FileUtils
 
 buildscript {
 	ext {
-		bootstrapFrameworkVersion = "1.0.1"
+		bootstrapFrameworkVersion = "1.0.2"
 		grailsVersion = project.grailsVersion
 		bootstrapFramework = [
 			//version             : "3.3.5",
@@ -141,11 +141,11 @@ task unzipPhantomJs(type: Copy) {
 clean {
 	def javascriptsTree = fileTree("grails-app/assets/javascripts") {
 		include "**/*"
-		exclude "*jquery*.js"
+		exclude "jquery*.js"
 	}
 	def stylesheetsTree = fileTree("grails-app/assets/stylesheets") {
 		include "**/*"
-		exclude "*/.gitignore"
+		exclude ".gitignore"
 	}
 	delete javascriptsTree
 	delete stylesheetsTree

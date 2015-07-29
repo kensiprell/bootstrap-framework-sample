@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 <head>
-	<title>Font Awesome LESS</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Font Awesome LESS</title>
 	<asset:stylesheet src="bootstrap-all.css"/>
 	<asset:stylesheet src="font-awesome-less.css"/>
 	<asset:javascript src="jquery.js"/>
@@ -17,7 +17,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body role="document">
 
 <!-- Fixed navbar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">

@@ -36,8 +36,7 @@ class BootstrapFunctionalSpec extends GebSpec {
         $("a.dropdown-toggle").click()
 
         then:
-        true
-		//$("a.dropdown-toggle").parent().classes() == ["dropdown", "open"]
+ 		$("a.dropdown-toggle").parent().classes() == ["dropdown", "open"]
 
 		when:
     	$("a.dropdown-toggle").click()
@@ -96,8 +95,16 @@ class BootstrapFunctionalSpec extends GebSpec {
 		new File("$root/grails-app/assets/javascripts/bootstrap").deleteDir()
 		new File("$root/grails-app/assets/stylesheets/bootstrap").deleteDir()
 		new File("$root/grails-app/assets/stylesheets/font-awesome").deleteDir()
-		new File("$root/grails-app/assets/javascripts").listFiles().each { it.delete() }
-		new File("$root/grails-app/assets/stylesheets").listFiles().each { it.delete() }
+		new File("$root/grails-app/assets/javascripts").listFiles().each { 
+            if (!it.name.startsWith("jquery")) {
+                it.delete() 
+            }
+        }
+		new File("$root/grails-app/assets/stylesheets").listFiles().each { 
+            if (it.name != ".gitignore") {
+                it.delete() 
+            }
+        }
 	}
 
 	static deleteZipFiles() {
