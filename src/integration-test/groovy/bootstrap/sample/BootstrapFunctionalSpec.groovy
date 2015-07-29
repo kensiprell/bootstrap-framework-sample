@@ -13,13 +13,25 @@ class BootstrapFunctionalSpec extends GebSpec {
 		deleteZipFiles()
 	}
 
-	void "go to start page"() {
+	void "go to start page and test JavaScript"() {
 		when:
 		go "/"
 
 		then:
 		title == "Bootstrap Framework"
 		$("span.glyphicon-align-left").css("font-family").contains("Glyphicons Halflings")
+		
+		when:
+        $("a.dropdown-toggle").click()
+
+        then:
+        $("a.dropdown-toggle").parent().classes() == ["dropdown", "open"]
+
+		when:
+        $("a.dropdown-toggle").click()
+
+        then:
+        !$("a.dropdown-toggle").parent().classes() == ["dropdown"]
 	}
 
 	void "go to bootstrapCssExample"() {

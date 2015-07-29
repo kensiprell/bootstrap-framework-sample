@@ -142,6 +142,7 @@ clean {
 	def javascriptsTree = fileTree("grails-app/assets/javascripts") {
 		include "**/*"
 		exclude ".gitignore"
+		exclude "jquery*.js"
 	}
 	def stylesheetsTree = fileTree("grails-app/assets/stylesheets") {
 		include "**/*"
