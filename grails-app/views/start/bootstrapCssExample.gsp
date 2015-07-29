@@ -9,7 +9,7 @@
 	<asset:stylesheet src="bootstrap-all.css"/>
 	<asset:javascript src="jquery.js"/>
 	<asset:javascript src="bootstrap-all.js"/>
-    <asset:javascript src="bootstrap/affix.js"/>
+	<asset:javascript src="bootstrap/affix.js"/>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

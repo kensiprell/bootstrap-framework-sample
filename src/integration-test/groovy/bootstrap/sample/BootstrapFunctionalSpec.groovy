@@ -31,17 +31,17 @@ class BootstrapFunctionalSpec extends GebSpec {
 
 		then:
 		$("span.label-primary").css("background-color") == "rgba(51, 122, 183, 1)"
-		
-		when:
-        $("a.dropdown-toggle").click()
-
-        then:
- 		$("a.dropdown-toggle").parent().classes() == ["dropdown", "open"]
 
 		when:
-    	$("a.dropdown-toggle").click()
+		$("a.dropdown-toggle").click()
 
-    	then:
+		then:
+		$("a.dropdown-toggle").parent().classes() == ["dropdown", "open"]
+
+		when:
+		$("a.dropdown-toggle").click()
+
+		then:
 		$("a.dropdown-toggle").parent().classes() == ["dropdown"]
 	}
 
@@ -95,16 +95,16 @@ class BootstrapFunctionalSpec extends GebSpec {
 		new File("$root/grails-app/assets/javascripts/bootstrap").deleteDir()
 		new File("$root/grails-app/assets/stylesheets/bootstrap").deleteDir()
 		new File("$root/grails-app/assets/stylesheets/font-awesome").deleteDir()
-		new File("$root/grails-app/assets/javascripts").listFiles().each { 
-            if (!it.name.startsWith("jquery")) {
-                it.delete() 
-            }
-        }
-		new File("$root/grails-app/assets/stylesheets").listFiles().each { 
-            if (it.name != ".gitignore") {
-                it.delete() 
-            }
-        }
+		new File("$root/grails-app/assets/javascripts").listFiles().each {
+			if (!it.name.startsWith("jquery")) {
+				it.delete()
+			}
+		}
+		new File("$root/grails-app/assets/stylesheets").listFiles().each {
+			if (it.name != ".gitignore") {
+				it.delete()
+			}
+		}
 	}
 
 	static deleteZipFiles() {

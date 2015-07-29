@@ -15,10 +15,10 @@ environments {
 	}
 	// ./gradlew -Dgeb.env=phantomJs integrationTest
 	phantomJs {
-		driver = { 
-			def driverInstance = new PhantomJSDriver() 
-			driverInstance.manage().window().maximize() 
-			driverInstance 
+		driver = {
+			def driverInstance = new PhantomJSDriver()
+			driverInstance.manage().window().maximize()
+			driverInstance
 		}
 	}
 }
