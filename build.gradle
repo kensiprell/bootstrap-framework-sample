@@ -141,12 +141,11 @@ task unzipPhantomJs(type: Copy) {
 clean {
 	def javascriptsTree = fileTree("grails-app/assets/javascripts") {
 		include "**/*"
-		exclude ".gitignore"
-		exclude "jquery*.js"
+		exclude "*jquery*.js"
 	}
 	def stylesheetsTree = fileTree("grails-app/assets/stylesheets") {
 		include "**/*"
-		exclude ".gitignore"
+		exclude "*/.gitignore"
 	}
 	delete javascriptsTree
 	delete stylesheetsTree
