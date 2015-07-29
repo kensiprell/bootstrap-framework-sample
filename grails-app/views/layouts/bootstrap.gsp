@@ -7,6 +7,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title><g:layoutTitle default="Bootstrap Sample"/></title>
 	<asset:stylesheet src="bootstrap-all.css"/>
+	<asset:javascript src="jquery.js"/>
 	<asset:javascript src="bootstrap-all.js"/>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>

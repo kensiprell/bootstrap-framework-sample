@@ -18,3 +18,5 @@ stacktrace.log
 /build
 buildSrc/.gradle
 buildSrc/build
+grails-app/assets/javascripts/bootstrap-all.js
+grails-app/assets/javascripts/bootstrap
