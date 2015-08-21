@@ -138,6 +138,8 @@ task unzipPhantomJs(type: Copy) {
 	}
 }
 
+// Do not use this block in your own application.
+// It is used for plugin development.
 clean {
 	def javascriptsTree = fileTree("grails-app/assets/javascripts") {
 		include "**/*"
