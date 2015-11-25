@@ -19,7 +19,7 @@ buildscript {
 				//invalidVersionFails : false
 			]
 		]
-		assetPiplineGradleVersion = "2.3.8"
+		assetPipelineGradleVersion = "2.3.8"
 		assetPipelineGrailsVersion = "3.0.2"
 		assetPipelineLessVersion = "2.3.0"
 	}
