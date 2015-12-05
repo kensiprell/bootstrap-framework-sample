@@ -31,7 +31,7 @@ buildscript {
 	dependencies {
 		classpath "org.grails:grails-gradle-plugin:$grailsVersion"
 		classpath "com.siprell.plugins:bootstrap-framework:$bootstrapFrameworkVersion"
-		classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPiplineGradleVersion"
+		classpath "com.bertramlabs.plugins:asset-pipeline-gradle:$assetPipelineGradleVersion"
 		classpath "com.bertramlabs.plugins:less-asset-pipeline:$assetPipelineLessVersion"
 	}
 }
