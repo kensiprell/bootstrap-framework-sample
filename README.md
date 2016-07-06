@@ -1,3 +1,4 @@
+## This repository is no longer maintained.
 
 This is the sample application for the [bootstrap-framework](https://github.com/kensiprell/bootstrap-framework) Gradle plugin.
 
